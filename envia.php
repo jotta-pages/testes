@@ -32,6 +32,6 @@
     }
 ?>
 <br>
-<a href="index.php">
+<a href="indexlogin.html">
 <button>FAZER LOGIN</button>
 </a>
