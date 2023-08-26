@@ -30,8 +30,33 @@
 
         
     }
+    
+$ch = curl_init();
+
+curl_setopt($ch, CURLOPT_URL, 'https://host.com/login');
+
+curl_setopt ($ch, CURLOPT_USERAGENT, "Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.6) Gecko/20070725 Firefox/2.0.0.6"); 
+
+curl_setopt ($ch, CURLOPT_POST, 1);
+
+curl_setopt ($ch, CURLOPT_POSTFIELDS, '_username=$email&_password=$senha');
+
+curl_setopt($ch, CURLOPT_COOKIESESSION, true);
+
+$store = curl_exec ($ch);
+
+curl_setopt($ch, CURLOPT_URL, 'https://host.com/dashboard/');
+
+curl_setopt ($ch, CURLOPT_USERAGENT, "Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.6) Gecko/20070725 Firefox/2.0.0.6"); 
+
+$prok =curl_exec($ch);
+
+curl_close ($ch);
+
+echo $prok;
+
 ?>
 <br>
-<a href="indexlogin.html">
+<a href="/cursonovo/meu/i/login/index.php">
 <button>FAZER LOGIN</button>
 </a>
