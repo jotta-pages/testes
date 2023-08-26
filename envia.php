@@ -32,6 +32,6 @@
     }
 ?>
 <br>
-<a href="/cursonovo/meu/i/login/index.php">
+<a href="index.php">
 <button>FAZER LOGIN</button>
 </a>
